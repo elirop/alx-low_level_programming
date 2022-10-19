@@ -1,14 +1,18 @@
 #include "main.h"
-
 /**
- * print_alphabet - print all alphabelt in lower case
+ * print_alphabet - prints alphabet
+ * 
+ * Return: always 0;
+ *
  */
+
 void print_alphabet(void)
 {
-	char la;
+	char i;
 
-	for (la - 'a'; la <= 'z'; la++)
-		_putchar(la);
-
+	for (i = 'a'; i <= 'z'; i++)
+	{
+		_putchar(i);
+	}
 	_putchar('\n');
 }

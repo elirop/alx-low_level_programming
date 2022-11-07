@@ -1,18 +1,15 @@
 #include <stdio.h>
-#include <main.h>
-
+#define UNUSED(X) (void)(x)
 /**
- * main - Print the name of the program
- * @argc: Count arguments
- * @argv: Arguments
- *
- * Return: Always 0 (Success)
+ * main - main function
+ * @argc: argumentc
+ * @argv: vector of arguments
+ * Return: Always 0
  */
 
 int main(int argc, char *argv[])
 {
-	(void) argc;
+	UNUSED(argc);
 	printf("%s\n", argv[0]);
-
 	return (0);
 }

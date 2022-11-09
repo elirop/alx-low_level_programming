@@ -32,6 +32,7 @@ char *create_array(unsigned int size, char c)
 			*(buffer + position) = c;
 			position++;
 		}
+
 	}
 	return (buffer);
 }

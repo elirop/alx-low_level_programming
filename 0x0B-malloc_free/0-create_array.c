@@ -3,7 +3,7 @@
  * create_array - array for prints a string
  * @size: number elements array
  * @c: char
- * Returned: pointer
+ * Return: pointer
  */
 
 char *create_array(unsigned int size, char c)
@@ -26,13 +26,13 @@ char *create_array(unsigned int size, char c)
 
 	else
 	{
-		position = 0;
-		while (position < size) /*while for array*/
-		{
-			*(buffer + position) = c;
-			position++;
-		}
-
+	position = 0;
+	while (position < size) /*While for array*/
+	{
+	*(buffer + position) = c;
+	position++;
 	}
+
 	return (buffer);
+	}
 }

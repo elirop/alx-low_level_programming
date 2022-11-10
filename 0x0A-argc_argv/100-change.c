@@ -1,56 +1,53 @@
-#include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-/*
- * main - main function
- * @argc: argumentc
- * @argv: vector of argument
+
+/**
+ * main - function
+ * @argc: length of argv
+ * @argv: number of argument
  * Return: Always 0
  */
+
 int main(int argc, char *argv[])
 {
-	int coins = 0;
+	/*Declaring variables*/
+	int position, total, change, aux;
+	int coins[] = {25, 10, 5, 2, 1}; /*Array int*/
 
-	if (argc == 2)
+	position = total = change = aux = 0;
+
+	if (argc != 2)
 	{
-		if (strchr(argv[argc - 1], '-'))
-		{
-			printf("0\n");
-			return (1);
-		}
-		int money;
+		printf("Error\n");
+		return (1);
+	}
 
-		money = atoi(argv[argc - 1]);
+	total = atoi(argv[1]); /*Covert str to int*/
 
-		while (money > 0)
-		{
-			if (money % 25 == 0)
-			{
-				money -= 25;
-			}
-			else if (money % 10 == 0)
-			{
-				money -= 10;
-			}
-			else if (money % 5 == 0)
-			{
-				money -= 5;
-			}
-			else if (money % 2 == 0)
-			{
-				money -= 2;
-			}
-			else
-			{
-				money--;
-			}
-			coins++;
-		}
-		printf("%d\n", coins);
+	if (total <= 0)
+
+	{
+		printf("0\n");
 		return (0);
 	}
-	printf("Error\n");
-	return (1);
+
+	/*Declaring While*/
+
+	while (coins[position] != '\0')
+
+	{
+		if (total >= coins[position])
+
+		{
+			aux = (total / coins[position]);
+			change += aux;
+			total -= coins[position] * aux;
+		}
+
+		position++;
+
+	}
+
+	printf("%d\n", change);
+	return (0);
 }
